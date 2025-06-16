@@ -12,7 +12,7 @@ import java.time.LocalTime;
 public class UserInfo {
     @TableId(type = IdType.AUTO)
     private Integer id;
-    private String username;
+    private String userName;
     private String password;
     private String githubUrl;
     private Integer deleteFlag;
