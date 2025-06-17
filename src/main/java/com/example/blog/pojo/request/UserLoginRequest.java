@@ -7,7 +7,7 @@ import org.hibernate.validator.constraints.Length;
 @Data
 public class UserLoginRequest {
     @NotNull
-    @Length(max = 20,min = 5)
+    @Length(max = 20)
     private String userName;
     @NotNull
     @Length(min = 5, message = "密码长度不能小于5")

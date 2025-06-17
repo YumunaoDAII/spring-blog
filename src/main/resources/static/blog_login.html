@@ -51,8 +51,12 @@
                     password: $("#password").val()
                 }),
                 success: function (result){
-                    if (result!=null&&result.code=="SUCCESS"){
-                        localStorage.setItem("userId",result.data.userId);
+                    console.log("进入登录成功回调"); // 确认回调是否触发
+                    console.log("result.code:", result.code); // 确认code为SUCCESS
+                    console.log("result.data:", result.data); // 确认data包含userId
+                    if (result && result.code === "SUCCESS" && result.data && result.data.userId){
+                        localStorage.setItem("loginUserId",result.data.userId);
+                        console.log("存储后userId:", localStorage.getItem("loginUserId"));
                         localStorage.setItem("userToken",result.data.token);
                         location.href="blog_list.html";
                     }else {
