@@ -42,7 +42,7 @@
             <div class="content">
                 <div class="title"></div>
                 <div class="date"></div>
-                <div class="detail"></div>
+                <div class="detail" id="detail" style="background: transparent"></div>
                 <div class="operating">
                     <button onclick="window.location.href='blog_update.html'">编辑</button>
                     <button onclick="deleteBlog()">删除</button>
@@ -75,7 +75,10 @@
                     if (result.code=="SUCCESS"&&result.data!=null){
                         $(".container .title").text(result.data.title);
                         $(".container .date").text(result.data.createTime);
-                        $(".container .detail").text(result.data.content);
+                        // $(".container .detail").text(result.data.content);
+                        editormd.markdownToHTML("detail", {
+                            markdown: result.data.content,
+                        });
                     }else {
                         alert("发生错误");
                     }

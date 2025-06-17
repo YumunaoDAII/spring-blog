@@ -1,17 +1,21 @@
 package com.example.blog.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.example.blog.common.exception.BlogException;
 import com.example.blog.common.util.BeanTransUtils;
 import com.example.blog.mapper.BlogInfoMapper;
 import com.example.blog.pojo.dataobject.BlogInfo;
+import com.example.blog.pojo.request.AddBlogRequest;
 import com.example.blog.pojo.response.BlogInfoResponse;
 import com.example.blog.service.BlogService;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
+@Slf4j
 @Service
 public class BlogServiceImpl implements BlogService {
     @Autowired
@@ -37,5 +41,21 @@ public class BlogServiceImpl implements BlogService {
         queryWrapper.lambda().eq(BlogInfo::getDeleteFlag,0).eq(BlogInfo::getId,blogId);
         BlogInfo blogInfo = blogInfoMapper.selectOne(queryWrapper);
         return blogInfo;
+    }
+
+    @Override
+    public Boolean addBlog(AddBlogRequest addBlogRequest) {
+        BlogInfo blogInfo = new BlogInfo();
+        BeanUtils.copyProperties(addBlogRequest,blogInfo);
+        try {
+            Integer result = blogInfoMapper.insert(blogInfo);
+            if (result==1){
+                return true;
+            }
+            return false;
+        }catch (Exception e){
+            log.error("博客发布失败, e:",e);
+            throw new BlogException("内部错误，请联系管理员");
+        }
     }
 }
