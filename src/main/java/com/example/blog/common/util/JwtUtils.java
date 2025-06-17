@@ -6,6 +6,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.util.StringUtils;
 
 import java.nio.charset.StandardCharsets;
 import java.security.Key;
@@ -23,9 +24,17 @@ public class JwtUtils {
         log.info("compact:   "+compact);
         return compact;
     }
-    public static Object parseToken(String token){
+    public static Claims parseToken(String token){
+        if (!StringUtils.hasLength(token)){
+            return null;
+        }
         JwtParser build = Jwts.parserBuilder().setSigningKey(key).build();
-        Claims claims = build.parseClaimsJws(token).getBody();
+        Claims claims=null;
+        try {
+            claims = build.parseClaimsJws(token).getBody();
+        }catch (Exception e){
+             log.error("Token解析失败，token ："+token);
+        }
         return claims;
     }
 }
