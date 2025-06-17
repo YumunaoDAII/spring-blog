@@ -44,8 +44,8 @@
                 <div class="date"></div>
                 <div class="detail" id="detail" style="background: transparent"></div>
                 <div class="operating">
-                    <button onclick="window.location.href='blog_update.html'">编辑</button>
-                    <button onclick="deleteBlog()">删除</button>
+<!--                    <button onclick="window.location.href='blog_update.html'">编辑</button>-->
+<!--                    <button onclick="deleteBlog()">删除</button>-->
                 </div>
             </div>
 
@@ -79,6 +79,14 @@
                         editormd.markdownToHTML("detail", {
                             markdown: result.data.content,
                         });
+                        //判断是否显示编辑/删除
+                        let loginUserId=localStorage.getItem("loginUserId");
+                        if (result.data.userId==loginUserId){
+                            let blogId=result.data.id;
+                            let finalHtml='<button onclick="window.location.href=\'blog_update.html?blogId='+blogId+'\'">编辑</button>';
+                            finalHtml+='<button onclick="deleteBlog('+blogId+')">删除</button>';
+                            $(".content .operating").html(finalHtml);
+                        }
                     }else {
                         alert("发生错误");
                     }
@@ -104,8 +112,19 @@
         //var userUrl = "/user/getAuthorInfo" + location.search;
         //getUserInfo(userUrl);
 
-        function deleteBlog() {
-            alert("删除博客");
+        function deleteBlog(blogId) {
+            // alert("删除博客");
+            $.ajax({
+                type: "post",
+                url: "/blog/delete?blogId="+blogId,
+                success: function (result){
+                    if (result.code=="SUCCESS"&&result.data==true){
+                        location.href="blog_list.html";
+                    }else {
+                        alert("删除失败："+result.errMsg);
+                    }
+                }
+            });
         }
     </script>
 </body>

@@ -2,11 +2,11 @@ package com.example.blog.controller;
 
 
 import com.example.blog.pojo.request.AddBlogRequest;
+import com.example.blog.pojo.request.UpdateBlogRequest;
 import com.example.blog.pojo.response.BlogInfoResponse;
 import com.example.blog.service.BlogService;
 import jakarta.annotation.Resource;
 import jakarta.validation.constraints.NotNull;
-import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -36,5 +36,15 @@ public class BlogController {
     public Boolean addBlog(@RequestBody @Validated AddBlogRequest addBlogRequest){
         log.info("发布博客,userId:{},title:{}",addBlogRequest.getUserId(),addBlogRequest.getTitle());
         return blogService.addBlog(addBlogRequest);
+    }
+    @RequestMapping("/update")
+    public Boolean update(@RequestBody @Validated UpdateBlogRequest updateBlogRequest){
+        log.info("更新博客,request:{}",updateBlogRequest);
+        return blogService.updateBlog(updateBlogRequest);
+    }
+    @RequestMapping("/delete")
+    public Boolean delete(@NotNull(message = "id不能为null") Integer blogId){
+        log.info("删除博客，id:{}",blogId);
+        return blogService.delete(blogId);
     }
 }
