@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.blog.common.exception.BlogException;
 import com.example.blog.common.util.BeanTransUtils;
 import com.example.blog.common.util.JwtUtils;
+import com.example.blog.common.util.SecurityUtil;
 import com.example.blog.mapper.UserInfoMapper;
 import com.example.blog.pojo.dataobject.BlogInfo;
 import com.example.blog.pojo.dataobject.UserInfo;
@@ -35,7 +36,10 @@ public class UserServiceImpl implements UserService {
         if (userInfo==null){
             throw new BlogException("用户不存在");
         }
-        if (!userLoginRequest.getPassword().equals(userInfo.getPassword())){
+//        if (!userLoginRequest.getPassword().equals(userInfo.getPassword())){
+//            throw new BlogException("密码错误");
+//        }
+        if (!SecurityUtil.verify(userLoginRequest.getPassword(),userInfo.getPassword())){
             throw new BlogException("密码错误");
         }
         Map<String,Object> map=new HashMap<>();
