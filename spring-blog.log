@@ -339,3 +339,73 @@ com.example.blog.common.exception.BlogException: null
 2025-06-18T00:07:19.930+08:00  INFO 20600 --- [http-nio-8080-exec-9] c.e.b.c.interceptor.LoginInterceptor     : Token  :eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoibGlzaSIsImlkIjoyfQ.CznKID4IHt2CeLf4HEPH5efT_iv220vkZ7r8z6jREQ8
 2025-06-18T00:07:19.933+08:00  INFO 20600 --- [http-nio-8080-exec-8] c.e.blog.controller.BlogController       : 获取博客列表。。。。
 2025-06-18T00:07:19.934+08:00  INFO 20600 --- [http-nio-8080-exec-9] c.e.blog.controller.UserController       : 获取用户信息，userId:2
+2025-06-18T00:08:52.332+08:00  INFO 20600 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-18T00:08:52.687+08:00  INFO 20600 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-18T00:08:52.689+08:00  INFO 20600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-18T00:08:52.695+08:00  INFO 20600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-18T14:36:44.255+08:00  INFO 20284 --- [main] c.e.blog.SpringBlogDemoApplication       : Starting SpringBlogDemoApplication using Java 17.0.10 with PID 20284 (C:\Bit_studey\JavaEE进阶\后端代码\spring-blog-demo\spring-blog-demo\target\classes started by 白金黑曜 in C:\Bit_studey\JavaEE进阶\后端代码\spring-blog-demo\spring-blog-demo)
+2025-06-18T14:36:44.257+08:00  INFO 20284 --- [main] c.e.blog.SpringBlogDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-06-18T14:36:45.368+08:00  INFO 20284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-18T14:36:45.381+08:00  INFO 20284 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-18T14:36:45.381+08:00  INFO 20284 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-18T14:36:45.437+08:00  INFO 20284 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-18T14:36:45.438+08:00  INFO 20284 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1144 ms
+2025-06-18T14:36:46.243+08:00  INFO 20284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-18T14:36:46.251+08:00  INFO 20284 --- [main] c.e.blog.SpringBlogDemoApplication       : Started SpringBlogDemoApplication in 2.513 seconds (process running for 5.307)
+2025-06-18T14:39:22.538+08:00  INFO 20284 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-18T14:39:22.853+08:00  INFO 20284 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-18T14:39:25.519+08:00  INFO 21428 --- [main] c.e.blog.SpringBlogDemoApplication       : Starting SpringBlogDemoApplication using Java 17.0.10 with PID 21428 (C:\Bit_studey\JavaEE进阶\后端代码\spring-blog-demo\spring-blog-demo\target\classes started by 白金黑曜 in C:\Bit_studey\JavaEE进阶\后端代码\spring-blog-demo\spring-blog-demo)
+2025-06-18T14:39:25.522+08:00  INFO 21428 --- [main] c.e.blog.SpringBlogDemoApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-06-18T14:39:26.374+08:00  INFO 21428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-18T14:39:26.385+08:00  INFO 21428 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-18T14:39:26.385+08:00  INFO 21428 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-18T14:39:26.431+08:00  INFO 21428 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-18T14:39:26.432+08:00  INFO 21428 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 879 ms
+2025-06-18T14:39:27.025+08:00  INFO 21428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-18T14:39:27.033+08:00  INFO 21428 --- [main] c.e.blog.SpringBlogDemoApplication       : Started SpringBlogDemoApplication in 1.953 seconds (process running for 2.488)
+2025-06-18T14:39:36.299+08:00  INFO 21428 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-18T14:39:36.299+08:00  INFO 21428 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-18T14:39:36.300+08:00  INFO 21428 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-18T14:39:38.053+08:00  INFO 21428 --- [http-nio-8080-exec-7] c.e.blog.controller.UserController       : 用户登录，用户名：lisi
+2025-06-18T14:39:38.148+08:00  INFO 21428 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-18T14:39:38.307+08:00  INFO 21428 --- [http-nio-8080-exec-7] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fe210a2
+2025-06-18T14:39:38.309+08:00  INFO 21428 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-18T14:39:38.368+08:00  INFO 21428 --- [http-nio-8080-exec-7] c.example.blog.common.util.SecurityUtil  : 登录参数校验, inputPassword:123456,sqlPassword:3923ea991c9a4e51bf0bbd446a406d4650f87956cb581d7bb3ce4fdcb0d02cea
+2025-06-18T14:39:38.410+08:00  INFO 21428 --- [http-nio-8080-exec-7] com.example.blog.common.util.JwtUtils    : compact:   eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoibGlzaSIsImlkIjoyfQ.CznKID4IHt2CeLf4HEPH5efT_iv220vkZ7r8z6jREQ8
+2025-06-18T14:39:38.538+08:00  INFO 21428 --- [http-nio-8080-exec-4] c.e.b.c.interceptor.LoginInterceptor     : Token  :eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoibGlzaSIsImlkIjoyfQ.CznKID4IHt2CeLf4HEPH5efT_iv220vkZ7r8z6jREQ8
+2025-06-18T14:39:38.538+08:00  INFO 21428 --- [http-nio-8080-exec-3] c.e.b.c.interceptor.LoginInterceptor     : Token  :eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoibGlzaSIsImlkIjoyfQ.CznKID4IHt2CeLf4HEPH5efT_iv220vkZ7r8z6jREQ8
+2025-06-18T14:39:38.565+08:00  INFO 21428 --- [http-nio-8080-exec-4] c.e.blog.controller.BlogController       : 获取博客列表。。。。
+2025-06-18T14:39:38.573+08:00  INFO 21428 --- [http-nio-8080-exec-3] c.e.blog.controller.UserController       : 获取用户信息，userId:2
+2025-06-18T14:39:44.201+08:00  INFO 21428 --- [http-nio-8080-exec-10] c.e.b.c.interceptor.LoginInterceptor     : Token  :eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoibGlzaSIsImlkIjoyfQ.CznKID4IHt2CeLf4HEPH5efT_iv220vkZ7r8z6jREQ8
+2025-06-18T14:39:44.201+08:00  INFO 21428 --- [http-nio-8080-exec-1] c.e.b.c.interceptor.LoginInterceptor     : Token  :eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoibGlzaSIsImlkIjoyfQ.CznKID4IHt2CeLf4HEPH5efT_iv220vkZ7r8z6jREQ8
+2025-06-18T14:39:44.204+08:00  INFO 21428 --- [http-nio-8080-exec-1] c.e.blog.controller.UserController       : 获取用户信息，blogId:1
+2025-06-18T14:39:44.205+08:00  INFO 21428 --- [http-nio-8080-exec-10] c.e.blog.controller.BlogController       : 获取博客详情,   blogId:1
+2025-06-18T14:39:50.895+08:00  INFO 21428 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-18T14:39:51.203+08:00  INFO 21428 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-18T14:39:51.206+08:00  INFO 21428 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-18T14:39:51.212+08:00  INFO 21428 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-18T14:56:14.181+08:00  INFO 16148 --- [main] c.e.blog.SpringBlogDemoApplication       : Starting SpringBlogDemoApplication using Java 17.0.10 with PID 16148 (C:\Bit_studey\JavaEE进阶\后端代码\spring-blog-demo\spring-blog-demo\target\classes started by 白金黑曜 in C:\Bit_studey\JavaEE进阶\后端代码\spring-blog-demo\spring-blog-demo)
+2025-06-18T14:56:14.183+08:00  INFO 16148 --- [main] c.e.blog.SpringBlogDemoApplication       : The following 1 profile is active: "dev"
+2025-06-18T14:56:14.998+08:00  INFO 16148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-18T14:56:15.010+08:00  INFO 16148 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-18T14:56:15.010+08:00  INFO 16148 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-18T14:56:15.058+08:00  INFO 16148 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-18T14:56:15.059+08:00  INFO 16148 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 840 ms
+2025-06-18T14:56:15.621+08:00  INFO 16148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-18T14:56:15.628+08:00  INFO 16148 --- [main] c.e.blog.SpringBlogDemoApplication       : Started SpringBlogDemoApplication in 1.958 seconds (process running for 2.466)
+2025-06-18T14:58:59.452+08:00  INFO 16148 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-18T14:58:59.452+08:00  INFO 16148 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-18T14:58:59.453+08:00  INFO 16148 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-06-18T14:58:59.583+08:00  INFO 16148 --- [http-nio-8080-exec-1] c.e.blog.controller.UserController       : 用户登录，用户名：zhangsan
+2025-06-18T14:58:59.670+08:00  INFO 16148 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-18T14:58:59.830+08:00  INFO 16148 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24e2c468
+2025-06-18T14:58:59.833+08:00  INFO 16148 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-18T14:58:59.891+08:00  INFO 16148 --- [http-nio-8080-exec-1] c.example.blog.common.util.SecurityUtil  : 登录参数校验, inputPassword:123456,sqlPassword:a705223c079943aaa7f5e6d7e15f1adadd42b942d067125142efda02e2ba49cd
+2025-06-18T14:58:59.938+08:00  INFO 16148 --- [http-nio-8080-exec-1] com.example.blog.common.util.JwtUtils    : compact:   eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiemhhbmdzYW4iLCJpZCI6MX0.eSdRAmIusR4zj0AgmARwZ4rx2UNOIVYGov4abumjtbI
+2025-06-18T15:02:10.098+08:00  INFO 1028 --- [main] c.e.blog.SpringBlogDemoApplicationTests  : Starting SpringBlogDemoApplicationTests using Java 17.0.10 with PID 1028 (started by �׽���� in C:\Bit_studey\JavaEE����\��˴���\spring-blog-demo\spring-blog-demo)
+2025-06-18T15:02:10.099+08:00  INFO 1028 --- [main] c.e.blog.SpringBlogDemoApplicationTests  : The following 1 profile is active: "prod"
+2025-06-18T15:02:11.811+08:00  INFO 1028 --- [main] c.e.blog.SpringBlogDemoApplicationTests  : Started SpringBlogDemoApplicationTests in 2.141 seconds (process running for 3.749)
+2025-06-18T16:33:54.708+08:00  INFO 16148 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-18T16:33:55.512+08:00  INFO 16148 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-18T16:33:55.587+08:00  INFO 16148 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-18T16:33:55.639+08:00  INFO 16148 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
